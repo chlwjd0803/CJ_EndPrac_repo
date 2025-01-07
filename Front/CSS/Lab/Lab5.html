@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        /* 1번 */
+        p{color:red;}
+
+        /* 2번 */
+        #title{color:green;}
+
+        /* 3번(틀림) 정답 : 두 개를 만족하는 것에 적용*/
+        .box#title{color:blue;}
+        /* 답했던것 : 두 그룹에 각각 적용 */
+        .box, #title{color:blue;}
+
+        /* 4번(틀림) 정답 : section밑의 모든 div 후손들에 적용 */
+        section div{color:black;}
+        /* 답했던것 : section의 바로 밑 div 자식만 적용*/
+        section > div{color:black;}
+
+        /* 5번 */
+        label + input{color:yellow;}
+
+        /* 6번(틀림) : 속성선택자 복습 필요 */
+        a[href = "https://www.naver.com"] span{color:red;}
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
