@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position:relative;
+
+            /*
+            animation-name:move;
+            animation-duration:3s;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+            animation-direction: reverse; 반대방향으로 바꿀 수 있음
+            animation-direction: alternate; 왔다갔다 할수있음*/
+
+
+
+            animation:move 3s ease-in-out 1s infinite alternate both paused
+            /*이름, 지속시간, 움직임효과, 시작딜레이, 반복횟수, 진행방향, 전후스타일, 처음상태*/
+        }
+
+        @keyframes move{
+            from{left:0;}
+            to{left:1000px;}
+        }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div></div>
+    <button id="start">start</button>
+    <button id="paused">paused</button>
+    <script>
+        const box = document.querySelector("div");
+        document.getElementById("start").addEventListener("click", function(){
+            box.style.animationPlayState = "running";
+        });
+        document.getElementById("paused").addEventListener("click", function(){
+            box.style.animationPlayState = "paused";
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color: red;
+            position:relative;
+            animation-name: bgchange;
+            animation-duration: 5s; /*5초동안 실행(속도)*/
+            animation-delay: 1s; /*1초 뒤 실행*/
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bgchange {
+            0%{background-color: red;}
+            25%{background-color: orange;}
+            50%{background-color: yellow;}
+            75%{background-color: green;}
+            100%{background-color: blue;}
+        }
+
+    </style>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div></div>
+    
+</body>
+</html>

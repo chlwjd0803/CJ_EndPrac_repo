@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 100px; /*마진만큼 밀려남*/
+            background-color: purple;
+        }
+
+        div:hover{
+            /*좌표이동, 크기확대, 기울이기, 회전하기, 기준점으로부터 회전(rotate함께)*/
+            transform:translate(200px, 400px);
+            transform:scale(20, 20);
+            transform:skew(30deg, 30deg);
+            transform:rotate(30deg);
+            transform-origin:top left;
+        }
+    </style>
+
+    
+</head>
+<body>
+
+    <div></div>
+    
+</body>
+</html>
