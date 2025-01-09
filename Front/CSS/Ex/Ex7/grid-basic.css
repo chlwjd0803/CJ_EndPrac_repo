@@ -1,0 +1,30 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+
+    grid-template-columns: repeat(2, 100px); /*위에 것을 효율적으로 하는법*/
+    grid-template-rows: repeat(2, 100px);
+
+    grid-template-columns: repeat(2, minmax(50px, 100px));
+    grid-template-rows: repeat(2, minmax(50px, 100px));
+
+    
+    row-gap: 20px;
+    column-gap: 20px;
+
+    align-items: stretch; /* stretch, start, center, end : 가로로 채우는 느낌*/
+    justify-items: stretch; /* 위와 속성이 같고 새로로 채우는 느낌 */
+    place-items: stretch stretch; /* 위의 속성들을 한번에 다룰때 사용. */
+
+}
+
+.grid-item{
+    color:white;
+    background-color: #ff5252;
+}
+
+.grid-item:nth-child(2n){
+    background-color: #bf5e5e;
+}
+
