@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>text-1</p>
+    <p>text-2</p>
+    <p>text-3</p>
+
+    <script>
+        const pEls = document.querySelectorAll("p");
+
+        
+        pEls.forEach((el) => {
+            el.addEventListener("click", function(){
+                if(this.style.color === "red"){
+                    this.style.color = "black";
+                } else {
+                    this.style.color = "red";
+                }
+            });
+        });
+        
+
+        //this를 쓰고싶은 리스너에서 화살표함수를 되도록 사용하지 말자
+
+        
+        
+    </script>
+    
+</body>
+</html>

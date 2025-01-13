@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="clickEvent()">클릭</button>
+
+    <form>
+        <input type="text" onfocus="focusEvent()" onblur="blurEvent()">
+    </form>
+
+    <button id="button2">클릭2</button>
+
+    <button id="button3">클릭3</button>
+
+    <script>
+        function clickEvent(){
+            alert("클릭하였음.");
+        }
+        function focusEvent(){
+            console.log("포커스됨");
+        }
+        function blurEvent(){
+            console.log("포커스 해제됨");
+        }
+
+        const btnEl = document.querySelector("#button2");
+        btnEl.onclick = () => {
+            alert("click");
+        }
+
+        /* 같은 기능
+        btnEl.onclick = clickEvent;
+        function clickEvent(){
+            alert("click");
+        }
+        */
+
+        //리스너는 맨 아래에 작성하는 습관 들이기(그래야 안 번거로움)
+        const btn3El = document.querySelector("#button3");
+        btn3El.addEventListener("click", () => {
+            alert("button3 clicked!!");
+        });
+    </script>
+    
+</body>
+</html>

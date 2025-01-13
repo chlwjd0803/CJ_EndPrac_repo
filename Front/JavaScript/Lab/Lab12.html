@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Poppins&family=Roboto&display=swap');
+        .roboto{
+            font-family: "Roboto", sans-serif; 
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .box{
+            width: 304px;
+            height: 390px;
+            border: 1px solid black;
+            
+            
+        }
+
+        .inbox{
+            width: 190px;
+            height: 20px;
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+
+        #steam{
+            padding: 18px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none; /* 링크 밑줄 제거 */
+            margin-top: 28px;
+            display: inline-block;
+            color:white;
+            background-color: black;
+        }
+
+        #steam:hover{
+            color:navy;
+            background-color: white;
+        }
+
+        #or{
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #id, #pw{padding: 18px;}
+
+        #login{
+            width: 228px;
+            margin-top: 10px;
+            padding: 18px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #forgot{
+            font-size: 15px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box">
+        <div class="roboto">
+
+            <a id="steam" class="inbox" href="https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header" target="_blank">
+                <i class="fa-brands fa-steam"></i> Log in with Steam
+            </a>
+            <p id="or">or</p>
+
+            <form action="https://localhost/login.php">
+                <input id="id" name="email" class="inbox" type="text" placeholder="Username">
+                <input id="pw" name="passwd" class="inbox" type="password" placeholder="Password"><br>
+                <button type="submit" id="login">LOGIN</button><br>
+            </form>
+            
+            <a id="forgot" href="https://www.youtube.com/watch?v=_rqNuqVP3zw&ab_channel=Memeandsoundeffects%3F" target="_blank">Forgot your password?</a>
+
+        </div>
+    </div>    
+
+    
+    
+
+    <script>
+
+        const submitEl = document.querySelector("#login");
+        submitEl.addEventListener("click", (e) =>{
+
+            const idEl = document.querySelector("#id");
+            const pwEl = document.querySelector("#pw");
+            
+            if(idEl.value === ""){
+                alert("아이디를 입력해주세요.");
+                e.preventDefault();
+            }
+            else if(pwEl.value === ""){
+                alert("비밀번호를 입력해주세요.")
+                e.preventDefault();
+            }
+            else if(idEl.value.indexOf("@") === -1){
+                alert("아이디는 이메일 형태로 입력해 주세요.");
+                e.preventDefault();
+            }
+            else if(pwEl.value.length < 5){
+                alert("비밀번호는 5자리 이상 입력해주세요.")
+                e.preventDefault();
+            }
+            
+
+        })
+
+    </script>
+    
+</body>
+</html>
