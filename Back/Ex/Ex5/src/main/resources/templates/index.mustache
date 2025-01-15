@@ -1,0 +1,24 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <!-- 리스트인 경우에 안에 내용이 반복되어 출력됨 (중요함) -->
+    {{#memberList}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{email}}</td>
+            <td>{{password}}</td>
+        </tr>
+    {{/memberList}}
+    </tbody>
+</table>
+
+{{>layouts/footer}}
