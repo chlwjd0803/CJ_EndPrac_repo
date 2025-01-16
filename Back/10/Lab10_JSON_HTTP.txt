@@ -1,0 +1,31 @@
+사실 이부분 잘 이해가 가지 않는다.
+
+-1-
+POST /users/10 HTTP/1.1
+Content-Length: 77
+Content-Type: application/json
+Host: jsonplaceholder.typicode.com
+{
+  "userId" : 10,
+  "title" : "맛집 탐방하기",
+  "completed" : false
+}
+
+-2-
+GET /users/10 HTTP/1.1
+Host: jsonplaceholder.typicode.com
+
+-3-
+PATCH /todos/200 HTTP/1.1
+Content-Length: 73
+Content-Type: application/json
+Host: jsonplaceholder.typicode.com
+{
+  "id" : 200,
+  "title" : "멋지게 숨쉬기",
+  "completed" : true
+}
+
+-4-
+DELETE /todos/200 HTTP/1.1
+Host: jsonplaceholder.typicode.com
