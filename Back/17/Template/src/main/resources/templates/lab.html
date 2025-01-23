@@ -1,0 +1,24 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>셀프체크17</title>
+</head>
+<body>
+    <h1>Hello, <span id="target">World</span>!</h1>
+    <input type="text" id="text-input">
+    <button id="send-btn">전송</button>
+
+    <script>
+        const strElement = document.querySelector("#text-input");
+        const btnElement = document.querySelector("#send-btn");
+        btnElement.addEventListener("click", function(){
+            const str = strElement.value;
+            strElement.value = ""; //빈칸으로 만들어주기
+            target.innerText = str;
+        })
+
+    </script>
+
+</body>
+</html>
