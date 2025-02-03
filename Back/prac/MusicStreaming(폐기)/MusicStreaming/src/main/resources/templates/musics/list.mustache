@@ -1,0 +1,15 @@
+<!-- src/main/resources/templates/musics/list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music List</title>
+</head>
+<body>
+<h1>Music List</h1>
+<ul>
+    {{#musics}}
+        <li>{{title}} by {{artist}}</li>
+    {{/musics}}
+</ul>
+</body>
+</html>

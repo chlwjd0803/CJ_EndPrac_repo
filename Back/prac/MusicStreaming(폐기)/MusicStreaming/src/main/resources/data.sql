@@ -1,0 +1,2 @@
+INSERT INTO music(title, artist, url) VALUES ('Song1', 'Artist1', 'http://localhost:8080/music/stream/song1.mp3');
+INSERT INTO music(title, artist, url) VALUES ('Song2', 'Artist2', 'http://localhost:8080/music/stream/song2.mp3');
